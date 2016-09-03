@@ -1,0 +1,44 @@
+body {
+    margin-top:0;
+    margin-left: 0;
+}
+
+.all{
+    width:100%;
+    border:2px solid #000000;
+    display: inline-flex;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.filter {
+    width:20%;
+    height: 100%;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.content {
+    width:80%;
+    margin-top: 0;
+    margin-right: 0;
+    display: block;
+    float: right;
+    border-left: 2px solid #000000;
+}
+
+.search {
+    height: 50px;
+    border-bottom: 2px solid #000000;
+
+
+}
+
+.people{
+    height:100%;
+
+}
+.people.handlebar
+{
+    border-bottom: 2px solid #000000;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class = "handlebar">
+    {{#each handlebar}}
+
+    <table width="100%" border="1" rules = "rows" align="center">
+        <tr align="center">
+            <td width="20%">
+                <img src ='{{profileImageUrl}}' width="150" height="150">
+
+            </td>
+            <td width="20%">
+                <p><h2>{{firstName}} {{lastName}}</h2></p>
+                <p><h3>{{email}}</h3></p>
+            </td>
+            <td width ="20%">
+                <p>{{phoneNumber}}</p>
+                <p>{{shortAddress}}</p>
+            </td>
+            <td width = "20%">
+                <img src ='image/level.png' width="50" height="50" align="left">
+                <h1>{{skillsScore}}</h1>
+            </td>
+        </tr>
+    </table>
+
+    {{~/each}}
+
+         <!--<table width="100%" border="1" rules = "rows" align="center">-->
+             <!--<tr align="center">-->
+                <!--<td width="20%">-->
+                    <!--<img src ='image/userLogo.jpg' width="150" height="150">-->
+                    <!--<p>key.profileImageUrl</p>-->
+                <!--</td>-->
+                <!--<td width="20%"><p><h2>key.firstName key.lastName</h2></p>-->
+                    <!--<p><h3>key.email</h3></p>-->
+                <!--</td>-->
+                <!--<td width ="20%">-->
+                    <!--<p>key.phoneNumber</p>-->
+                    <!--<p>key.shortAddress</p>-->
+                <!--</td>-->
+
+                <!--<td width = "20%">-->
+                    <!--<img src ='image/level.png' width="70" height="70" align="left">-->
+                    <!--<h1>key.skillsScore</h1></td>-->
+             <!--</tr>-->
+         <!--</table>-->
+
+</div>
+
+
+</body>
+</html>
