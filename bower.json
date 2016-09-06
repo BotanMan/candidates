@@ -1,0 +1,21 @@
+{
+  "name": "candidates",
+  "homepage": "https://github.com/BotanMan/candidates",
+  "authors": [
+    "Pouin <macfrolov@yandex.ru>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "handlebars": "^4.0.5",
+    "jquery": "^3.1.0"
+  }
+}
