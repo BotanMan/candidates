@@ -1,17 +1,16 @@
-let DropDown = (function(){
+var DropDown = (function(){
 	'use strict';
 
-	let mainClass = 'dropDown'
+	let mainClass = 'dropDown';
 
 	function getSelectorClass(...args) {
 		return args.map((val) => mainClass + '-' + val).join(' ');
 	}
 
 	function genArrows() {
-		let res = $('<div/>', {
+		return $('<div/>', {
 			class: getSelectorClass('arrow', 'down')
 		});
-		return res;
 	}
 
 	function genSelect(props) {
@@ -30,10 +29,9 @@ let DropDown = (function(){
 	}
 
 	class DropDown extends EventEmitter {
-		constructor(selector, props = [], sortHandler) {
+		constructor(selector, props = []) {
 			super();
 			this.props = props;
-			this.sortHandler = sortHandler;
 			this.initFor(selector);
 		}
 		initFor(selector) {
@@ -43,8 +41,6 @@ let DropDown = (function(){
 
 			$(selector).append(this.$arrows);
 			$(selector).append(this.$select);
-
-			this.on('change', this.sortHandler);
 
 			this.$arrows.on('click', function() {
 				_this.changeDirection();
