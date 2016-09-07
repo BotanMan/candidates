@@ -19,40 +19,37 @@
     <div class="search">
       Поиск, сортировка
     </div>
-
-    <script id="people-template" type ="text/x-handlebars-template">
-      {{#each users}}
-      <div class="people">
-
-        <table width="100%" rules = "rows" align="center">
-          <tr align="center">
-            <td width="20%">
-              <img src ='{{profileImageUrl}}' width="150" height="150">
-
-            </td>
-            <td width="20%">
-              <p><h2>{{firstName}} {{lastName}}</h2></p>
-              <p><h3>{{email}}</h3></p>
-            </td>
-            <td width ="20%">
-              <p>{{phoneNumber}}</p>
-              <p>{{shortAddress}}</p>
-            </td>
-            <td width = "20%">
-              <img src ='image/level.png' width="50" height="50" align="left">
-              <h1>{{skillsScore}}</h1>
-            </td>
-          </tr>
-        </table>
-
-      </div>
-      {{~/each}}
-    </script>
-
-  </div>
+	  <div id="people">
+	 
+	  </div>
+	</div>
 
 </div>
+  <script id="people-template" type ="text/x-handlebars-template">
+		<table width="100%" rules = "rows" align="center" name="userTable">
+			{{#each usersCol}}
+				<tr align="center">
+					<td width="20%">
+						<img src = "{{profileImageUrl}}" width="150" height="150">
+					</td>
+					<td width="20%">
+						<p><h2>{{firstName}} {{lastName}}</h2></p>
+						<p><h3>{{email}}</h3></p>
+					</td>
+					<td width ="20%">
+						<p><h3>{{phoneNumber}}</h3></p>
+						<p><h3>{{shortAddress}}</h3></p>
+					</td>
+					<td width = "15%">
+						<img src ='handlebar/image/level.png' width="50" height="50" align="left">
+						<h1>{{skillsScore}}</h1>
+					</td>
+				</tr>
+			{{/each}}
+		</table>
+	</script>
 
+  <script src="lib/handlePeople.js" charset="utf-8"></script>
   <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
   <script src="bower_components/handlebars/handlebars.min.js" charset="utf-8"></script>
   <script src="lib/users.js" charset="utf-8"></script>
