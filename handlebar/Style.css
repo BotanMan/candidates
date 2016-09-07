@@ -1,44 +1,96 @@
 body {
-    margin-top:0;
-    margin-left: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.all{
-    width:100%;
-    border:2px solid #000000;
-    display: inline-flex;
-    margin-left: 0;
-    margin-top: 0;
+img {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
 }
 
-.filter {
-    width:20%;
-    height: 100%;
-    margin-top: 0;
-    margin-left: 0;
+.candidates--wrapper {
+  width: 100%;
+  /*background-color: lightyellow;*/
+  height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
 }
 
-.content {
-    width:80%;
-    margin-top: 0;
-    margin-right: 0;
-    display: block;
-    float: right;
-    border-left: 2px solid #000000;
+.candidates--sidebar {
+  background-color: lightblue;
+  height: 100vh;
+  width: 20vw;
+}
+.candidates--content {
+  background-color: lightcoral;
+  height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.candidates--content--search {
+  background-color: lightgreen;
+  padding: 30px;
+}
+.candidates--content--users {
+  /*background-color: red;*/
+  display: -webkit-flex;
+  display: -ms-flex;
+  padding: 30px;
 }
 
-.search {
-    height: 50px;
-    border-bottom: 2px solid #000000;
 
-
+.users {
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  /*background-color: black;*/
 }
-
-.people{
-    height:100%;
-
+.user {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  /*background-color: cyan;*/
+  padding: 30px;
 }
-.people.handlebar
-{
-    border-bottom: 2px solid #000000;
+.user--photo {
+  width: 20%;
+}
+.user--photo img {
+  height: 100px;
+}
+.user--about {
+  /*background-color: yellow;*/
+  width: 40%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user--contacts {
+  /*background-color: blue;*/
+  width: 30%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user--skills-score {
+  /*background-color: darkred;*/
+  width: 10%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
