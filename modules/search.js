@@ -15,7 +15,7 @@ let SearchBar = (function() {
                 '<div class="search-field"><input name="search_field" value="" /></div>' +
                 '<div class="search-button"><button>Go</button></div>'
             );
-            var input = jQuery('input[name="search_field"]');
+            var input = jQuery(selector).find('input[name="search_field"]');
             input.on('change', function () {
                 that.onChange(input.val());
             });
