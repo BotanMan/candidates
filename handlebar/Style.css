@@ -1,6 +1,8 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: Arial;
+  font-size: 14px;
 }
 
 img {
@@ -9,31 +11,64 @@ img {
   display: flex;
 }
 
+input {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+}
+
+button {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  background-color: #2ECC71;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #22AF5E;
+}
+
 .candidates--wrapper {
   width: 100%;
   /*background-color: lightyellow;*/
-  height: 100vh;
+  /*height: 100vh;*/
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
 }
 
 .candidates--sidebar {
-  background-color: lightblue;
+  background-color: #171B1E;
   height: 100vh;
   width: 20vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.candidates--sidebar h1 {
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 300;
+  padding: 30px;
 }
 .candidates--content {
-  background-color: lightcoral;
-  height: 100vh;
+  /*background-color: lightcoral;*/
+  /*height: 100vh;*/
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   flex-direction: column;
-  flex: 1;
+  width: 100%;
 }
 .candidates--content--search {
-  background-color: lightgreen;
+  background-color: #F6F6F6;
+  margin-left: 20vw;
+  width: 80vw;
+  position: fixed;
   padding: 30px;
 }
 .candidates--content--users {
@@ -41,6 +76,8 @@ img {
   display: -webkit-flex;
   display: -ms-flex;
   padding: 30px;
+  padding-top: 100px;
+  margin-left: 20vw;
 }
 
 
@@ -50,6 +87,7 @@ img {
   display: -ms-flex;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   /*background-color: black;*/
 }
 .user {
@@ -58,39 +96,86 @@ img {
   display: flex;
   /*background-color: cyan;*/
   padding: 30px;
+  justify-content: space-between;
 }
 .user--photo {
-  width: 20%;
+  height: 100px !important;
 }
 .user--photo img {
   height: 100px;
+  border-radius: 5px;
 }
 .user--about {
   /*background-color: yellow;*/
-  width: 40%;
+  /*width: 20%;*/
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+.user--contacts--email {
+  font-weight: 300;
+  margin-top: -10px;
 }
 .user--contacts {
   /*background-color: blue;*/
-  width: 30%;
+  /*width: 30%;*/
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .user--skills-score {
   /*background-color: darkred;*/
-  width: 10%;
+  /*width: 10%;*/
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+}
+.user--skills-score b {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.candidates--content--search {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
   align-items: center;
+}
+.candidates--content--search span {
+  margin-right: 10px;
+}
+.search-area {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+.candidates--content--dropdown {
+  position: fixed;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin-top: 250px;
+  padding: 40px;
+}
+.candidates--content--dropdown span {
+  margin-right: 10px;
+  color: #fff;
+  font-weight: 200;
+}
+.filter--area {
+  padding: 30px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
 }

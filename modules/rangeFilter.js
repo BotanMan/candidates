@@ -23,11 +23,14 @@
                 to.appendChild(what)
             }
             var that = this;
+            div.className = 'filter--area';
             input.className = 'from';
+            input.placeholder = 'From';
             input.addEventListener('change', function(){
                 that.onChange(input.value,input2.value)
             });
             input2.className = 'to';
+            input2.placeholder = 'To';
             input2.addEventListener('change', function(){
                 that.onChange(input.value,input2.value)
             });

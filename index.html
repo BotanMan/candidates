@@ -11,15 +11,13 @@
 
 <div class="candidates--wrapper">
   <div class="candidates--sidebar">
-    Sidebar
+    <h1>Filter</h1>
   </div>
   <div class="candidates--content">
     <div class="candidates--content--search">
       Search
     </div>
-    <div class="candidates--content--dropdown">
-
-    </div>
+    <div class="candidates--content--dropdown"><span>Sort by: </span></div>
     <div class="candidates--content--users" id="users">
       Users
     </div>
@@ -36,13 +34,13 @@
         </div>
         <div class="user--about">
           <h2 class="user--about--name">{{firstName}} {{lastName}}</h2>
-          <h3 class="user--about--email">{{email}}</h3>
         </div>
         <div class="user--contacts">
-          <div class="user--contacts--phone">{{phoneNumber}}</div>
+          <h3 class="user--about--email">Email: {{email}}</h3>
+          <div class="user--contacts--phone">Phone: {{phoneNumber}}</div>
           <div class="user--contacts--short-adress">{{shortAddress}}</div>
         </div>
-        <div class="user--skills-score">{{skillsScore}}</div>
+        <div class="user--skills-score">Total scores: <b>{{skillsScore}}</b></div>
       </div>
     {{/each}}
   </div>
