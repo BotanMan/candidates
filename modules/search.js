@@ -12,8 +12,9 @@ let SearchBar = (function() {
         initFor(selector) {
             let that = this;
             jQuery(selector).html(
-                '<div class="search-field"><input name="search_field" value="" /></div>' +
-                '<div class="search-button"><button>Go</button></div>'
+                '<span>Search user: </span>' +
+                '<div class="search-field"><input class="search-area" type="text" name="search_field" value="" /></div>' +
+                '<div class="buttons"><button class="button-search">Search</button></div>'
             );
             var input = jQuery(selector).find('input[name="search_field"]');
             input.on('change', function () {
