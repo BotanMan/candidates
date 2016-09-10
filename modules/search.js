@@ -9,21 +9,30 @@ let SearchBar = (function() {
          });
          }*/
 
+        constructor(selector){
+            super();
+            this.initFor(selector)
+        }
+
         initFor(selector) {
             let that = this;
             jQuery(selector).html(
                 '<div class="search-field"><input class="search-area" type="text" name="search_field" value="" placeholder="Search user"/></div>' +
                 '<div class="buttons"><button class="button-search">Search</button></div>'
             );
-            var input = jQuery(selector).find('input[name="search_field"]');
-            input.on('change', function () {
-                that.onChange(input.val());
+            that.$input = jQuery(selector).find('input[name="search_field"]');
+            that.$input.on('change', function () {
+                that.onChange(that.$input.val());
             });
         }
 
         onChange(value) {
             let that = this;
             that.emit('change', value);
+        }
+
+        getData(){
+            return this.$input.val();
         }
     }
     return SearchBar;
