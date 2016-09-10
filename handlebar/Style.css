@@ -25,11 +25,28 @@ button {
   border-radius: 3px;
   border: none;
   outline: none;
-  background-color: #2ECC71;
+  background-color: #FFDD3C;
 }
 button:hover {
   cursor: pointer;
-  background-color: #22AF5E;
+  background-color: rgb(255, 211, 10);
+}
+
+select {
+  background-color: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 10px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  width: 100%;
+  background: #fff url("http://www.scottgood.com/jsg/blog.nsf/images/arrowdown.gif") no-repeat 96% 50%;
+}
+select:hover {
+  cursor: pointer;
 }
 
 .candidates--wrapper {
@@ -53,7 +70,14 @@ button:hover {
   color: #fff;
   letter-spacing: 1px;
   font-weight: 300;
-  padding: 30px;
+  padding: 15px 30px;
+}
+.candidates--sidebar h3 {
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 300;
+  padding: 0 30px;
+  padding-top: 50px;
 }
 .candidates--content {
   /*background-color: lightcoral;*/
@@ -164,16 +188,20 @@ button:hover {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  margin-top: 250px;
-  padding: 40px;
+  flex-wrap: wrap;
+  top: 280px;
+  padding: 30px;
+  width: 15.8vw;
 }
 .candidates--content--dropdown span {
   margin-right: 10px;
   color: #fff;
-  font-weight: 200;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-weight: 300;
 }
 .filter--area {
-  padding: 30px;
+  padding: 0 24px;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
