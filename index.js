@@ -1,6 +1,7 @@
 let users = User.getBots();
 
 
+
 let search = new SearchBar('.candidates--content--search'),
     rangeFilter = new RangeFilter('.candidates--sidebar'),
     dropdown = new DropDown('.candidates--content--dropdown',
@@ -26,4 +27,8 @@ function onChange() {
         'firstName', 'lastName');
 
     updateUsers('#users', filteredUsers);
+    let elem = document.querySelectorAll('.user');
+    for (var i=0; i< elem.length; i++){
+        new ExpandableElement(elem[i]);
+    }
 }
