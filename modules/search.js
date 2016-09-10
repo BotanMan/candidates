@@ -21,8 +21,12 @@ let SearchBar = (function() {
                 '<div class="buttons"><button class="button-search">Search</button></div>'
             );
             that.$input = jQuery(selector).find('input[name="search_field"]');
-            that.$input.on('change', function () {
-                that.onChange(that.$input.val());
+
+            that.$input.on('keyup', function (event) {
+              if (that.currentValue !== that.$input.val()) {
+                  that.onChange(that.$input.val());
+                  that.currentValue = that.$input.val();
+              }
             });
         }
 
@@ -34,6 +38,7 @@ let SearchBar = (function() {
         getData(){
             return this.$input.val();
         }
+
     }
     return SearchBar;
 })();
