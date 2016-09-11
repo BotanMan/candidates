@@ -1,28 +1,32 @@
 let users = User.getBots();
 
 
-
 let search = new SearchBar('.candidates--content--search'),
     rangeFilter = new RangeFilter('.candidates--sidebar'),
+    rangeFilterBySkillsScore = new RangeFilter('.candidates--sidebar'),
     dropdown = new DropDown('.candidates--content--dropdown',
         ['firstName', 'lastName', 'skillsScore']);
 
 search.on('change', onChange);
 dropdown.on('change', onChange);
 rangeFilter.on('change', onChange);
+rangeFilterBySkillsScore.on('change', onChange);
 
 onChange();
 function onChange() {
     //sort
     let range = rangeFilter.getData(),
+        rangeBySS = rangeFilterBySkillsScore.getData(),
         sortDescriptor = dropdown.getData(),
         query = search.getData();
 
     let filteredUsers = users.slice();
 
     filteredUsers = filter.sortHandler(filteredUsers, sortDescriptor.key, sortDescriptor.order);
-    filteredUsers = filter.filterByRange(filteredUsers, 'skillsScore',
+    filteredUsers = filter.filterByRange(filteredUsers, 'skills.JavaScript',
         range.from, range.to);
+    filteredUsers = filter.filterByRange(filteredUsers, 'skillsScore',
+        rangeBySS.from, rangeBySS.to);
     filteredUsers = filter.filterByQuery(filteredUsers, query,
         'firstName', 'lastName');
 
