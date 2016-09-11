@@ -45,6 +45,9 @@
             input2.addEventListener('change', function(){
                 that.onChange(input.value,input2.value)
             });
+            var title = document.createElement('span');
+            title.innerHTML = 'Title';
+            appendThis(div, title);
             appendThis(div,input);
             appendThis(div,input2);
             appendThis(document.querySelector(selector), div);

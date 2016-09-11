@@ -12,7 +12,6 @@ let ExpandableElement = (() => {
                 if (this.state === false) {
                     this.state = true;
                     block.classList.remove('hidden')
-
                 } else {
                     this.state = false;
                     block.classList.add('hidden')
