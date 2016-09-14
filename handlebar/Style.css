@@ -131,6 +131,7 @@ select:hover {
   /*background-color: cyan;*/
   padding: 30px;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .user--photo {
   height: 100px !important;
@@ -152,6 +153,13 @@ select:hover {
 .user--contacts--email {
   font-weight: 300;
   margin-top: -10px;
+}
+.user--details {
+  flex-grow: 1;
+  width: 100%;
+  margin: 20px 0px 0px 0px;
+  padding: 10px;
+  background: lightgray;
 }
 .user--contacts {
   /*background-color: blue;*/
