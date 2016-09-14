@@ -1,8 +1,8 @@
 let users = User.getBots();
 
 let search = new SearchBar('.candidates--content--search'),
-    rangeFilter = new RangeFilter('.candidates--sidebar', 'JS Skill', 0, 250),
-    rangeFilterBySkillsScore = new RangeFilter('.candidates--sidebar', 'Skill Score', 0, 250),
+    rangeFilter = new RangeFilter('.candidates--sidebar', 'JS Skill', 0, getMaxByKey(users, 'skills.js')),
+    rangeFilterBySkillsScore = new RangeFilter('.candidates--sidebar', 'Skill Score', 0, getMaxByKey(users, 'skillsScore')),
     dropdown = new DropDown('.candidates--content--dropdown',
         [{'firstName': 'Имя'}, {'lastName': 'Фамилия'}, {'skillsScore': 'Навыки'}]);
 
@@ -34,4 +34,18 @@ function onChange() {
     for (var i = 0; i < elem.length; i++) {
         new ExpandableElement(elem[i]);
     }
+}
+
+function getMaxByKey(items, key) {
+  let filteredItems = items.slice();
+  let maxValue = 0;
+  for (var i = 0; i < filteredItems.length; i++) {
+    let item = filteredItems[i];
+    let filterBySkill = filter.getValueByKeyRec(item, key);
+    if (maxValue < filterBySkill) {
+      maxValue = filterBySkill;
+    }
+  }
+
+  return maxValue;
 }
