@@ -187,9 +187,16 @@ select:hover {
 }
 
 .dropDown-arrow{
-  width: 10px;
-  height: 10px;
-  background: white;
+  display: inline-block;
+  font: normal normal normal 14px/1.2 "FontAwesome";
+  color: #ffffff;
+  cursor: pointer;
+}
+.dropDown-arrow.dropDown-down:before {
+  content: "\f150";
+}
+.dropDown-arrow.dropDown-up:before {
+  content: "\f151";
 }
 
 .candidates--content--dropdown {
