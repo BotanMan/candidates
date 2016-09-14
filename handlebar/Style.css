@@ -155,11 +155,28 @@ select:hover {
   margin-top: -10px;
 }
 .user--details {
+  display: flex;
+  justify-content: space-between;
   flex-grow: 1;
   width: 100%;
   margin: 20px 0px 0px 0px;
   padding: 10px;
-  background: lightgray;
+  background: #F6F6F6;
+}
+.user--details .text {
+
+}
+.user--details .skills {
+
+}
+.user--details .skills ul {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  list-style: none;
+}
+.user--details .skills li {
+  display: flex;
+  justify-content: space-between;
 }
 .user--contacts {
   /*background-color: blue;*/
