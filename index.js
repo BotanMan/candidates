@@ -2,8 +2,8 @@ let users = User.getBots();
 
 
 let search = new SearchBar('.candidates--content--search'),
-    rangeFilter = new RangeFilter('.candidates--sidebar'),
-    rangeFilterBySkillsScore = new RangeFilter('.candidates--sidebar'),
+    rangeFilter = new RangeFilter('.candidates--sidebar', 'JS Skill', 0, 250),
+    rangeFilterBySkillsScore = new RangeFilter('.candidates--sidebar', 'Skill Score', 0, 250),
     dropdown = new DropDown('.candidates--content--dropdown',
         ['firstName', 'lastName', 'skillsScore']);
 
@@ -16,7 +16,7 @@ onChange();
 function onChange() {
     //sort
     let range = rangeFilter.getData(),
-        rangeBySS = rangeFilterBySkillsScore.getData(),
+        skillScoreRange = rangeFilterBySkillsScore.getData(),
         sortDescriptor = dropdown.getData(),
         query = search.getData();
 
@@ -26,13 +26,13 @@ function onChange() {
     filteredUsers = filter.filterByRange(filteredUsers, 'skills.JavaScript',
         range.from, range.to);
     filteredUsers = filter.filterByRange(filteredUsers, 'skillsScore',
-        rangeBySS.from, rangeBySS.to);
+        skillScoreRange.from, skillScoreRange.to);
     filteredUsers = filter.filterByQuery(filteredUsers, query,
         'firstName', 'lastName');
 
     updateUsers('#users', filteredUsers);
     let elem = document.querySelectorAll('.user');
-    for (var i=0; i< elem.length; i++){
+    for (var i = 0; i < elem.length; i++) {
         new ExpandableElement(elem[i]);
     }
 }
