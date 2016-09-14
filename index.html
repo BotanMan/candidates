@@ -44,7 +44,16 @@
         </div>
         <div class="user--skills-score">Total scores: <b>{{skills.js}},
           {{skillsScore}}</b></div>
-        <div class="user--details hidden">{{biography}}</div>
+        <div class="user--details hidden">
+          <div class="text">{{biography}}</div>
+          <div class="skills">
+            <ul>
+              <li><b>JS:</b> {{skills.js}}</li>
+              <li><b>CSS:</b> {{skills.css}}</li>
+              <li><b>angularJs:</b> {{skills.angular}}</li>
+            </ul>
+          </div>
+        </div>
       </div>
     {{/each}}
   </div>
