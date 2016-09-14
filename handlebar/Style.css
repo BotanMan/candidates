@@ -94,9 +94,16 @@ select:hover {
 .candidates--content--search {
   background-color: #F6F6F6;
   margin-left: 20vw;
-  width: 80vw;
+  width: 75vw;
   position: fixed;
   padding: 30px;
+}
+.candidates--content--search .search-field {
+  flex-grow: 1;
+}
+.candidates--content--search .search-field input {
+  width: 99%;
+  box-sizing: border-box;
 }
 .candidates--content--users {
   /*background-color: red;*/
@@ -124,6 +131,7 @@ select:hover {
   /*background-color: cyan;*/
   padding: 30px;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .user--photo {
   height: 100px !important;
@@ -145,6 +153,13 @@ select:hover {
 .user--contacts--email {
   font-weight: 300;
   margin-top: -10px;
+}
+.user--details {
+  flex-grow: 1;
+  width: 100%;
+  margin: 20px 0px 0px 0px;
+  padding: 10px;
+  background: lightgray;
 }
 .user--contacts {
   /*background-color: blue;*/
@@ -187,9 +202,16 @@ select:hover {
 }
 
 .dropDown-arrow{
-  width: 10px;
-  height: 10px;
-  background: white;
+  display: inline-block;
+  font: normal normal normal 14px/1.2 "FontAwesome";
+  color: #ffffff;
+  cursor: pointer;
+}
+.dropDown-arrow.dropDown-down:before {
+  content: "\f150";
+}
+.dropDown-arrow.dropDown-up:before {
+  content: "\f151";
 }
 
 .candidates--content--dropdown {
