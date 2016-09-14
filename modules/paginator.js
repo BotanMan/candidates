@@ -1,6 +1,6 @@
 let Paginator = (() => {
     "use strict";
-    class Pagitanor extends EventEmitter {
+    class Paginator extends EventEmitter {
         /**
          * Constructor for elements
          * @param selector
@@ -8,6 +8,7 @@ let Paginator = (() => {
          */
         constructor (selector, pageCount) {
             super();
+            this.currentPage = 0;
             this.init(selector, pageCount)
         }
 
@@ -16,24 +17,32 @@ let Paginator = (() => {
          * @param selector
          * @param pageCount
          */
-        init (selector, pageCount) {
+        init (container, pageCount) {
             /**
              * Appending item to element
              * @param to
              * @param what
              */
+            container.innerHTML = "";
             let appendThis = (to, what) => {
                 to.appendChild(what)
             };
+
             for (let i = 0; i < pageCount; i++) {
                 let pageBtn = document.createElement('button');
-                pageBtn.text(i + 1);
+                pageBtn.innerHTML = i + 1;
                 pageBtn.dataset.page = i;
-                appendThis(selector,pageBtn);
+                appendThis(container,pageBtn);
                 pageBtn.addEventListener('click', () => {
-                    return pageBtn.data.page;
+                    var page = pageBtn.dataset.page;
+                    this.currentPage = page;
+                    this.emit('pageChanged', page);
                 })
             }
+        }
+
+        getData() {
+            return this.currentPage;
         }
     }
     return Paginator;

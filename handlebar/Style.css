@@ -113,7 +113,9 @@ select:hover {
   padding-top: 100px;
   margin-left: 20vw;
 }
-
+.candidates--paging{
+  text-align: right; padding-right: 35px;
+}
 
 .users {
   width: 100%;

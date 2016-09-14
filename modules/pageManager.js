@@ -17,6 +17,8 @@ let PageManager = (() => {
                 let to = from + pageSize;
                 this.usersForRender.push(Array.slice(from,to))
             }
+
+            this.pagesCount = this.usersForRender.length;
         };
         /**
          * Returns selected page from Array
@@ -27,13 +29,6 @@ let PageManager = (() => {
             return this.usersForRender[page];
         };
 
-        /**
-         * Returns legth of users
-         * @returns {Number}
-         */
-        pageCount() {
-            return this.usersForRender.length;
-        }
     }
     return PageManager;
 })();
