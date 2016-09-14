@@ -94,9 +94,16 @@ select:hover {
 .candidates--content--search {
   background-color: #F6F6F6;
   margin-left: 20vw;
-  width: 80vw;
+  width: 75vw;
   position: fixed;
   padding: 30px;
+}
+.candidates--content--search .search-field {
+  flex-grow: 1;
+}
+.candidates--content--search .search-field input {
+  width: 99%;
+  box-sizing: border-box;
 }
 .candidates--content--users {
   /*background-color: red;*/
