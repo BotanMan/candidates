@@ -20,8 +20,8 @@ var DropDown = (function () {
 
         props.forEach((value) => {
             res.append($('<option/>', {
-                value: value,
-                text: value
+                value: Object.keys(value)[0],
+                text: value[Object.keys(value)[0]]
             }));
         });
 

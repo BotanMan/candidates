@@ -4,7 +4,7 @@ let search = new SearchBar('.candidates--content--search'),
     rangeFilter = new RangeFilter('.candidates--sidebar', 'JS Skill', 0, 250),
     rangeFilterBySkillsScore = new RangeFilter('.candidates--sidebar', 'Skill Score', 0, 250),
     dropdown = new DropDown('.candidates--content--dropdown',
-        ['firstName', 'lastName', 'skillsScore']);
+        [{'firstName': 'Имя'}, {'lastName': 'Фамилия'}, {'skillsScore': 'Навыки'}]);
 
 search.on('change', onChange);
 dropdown.on('change', onChange);
