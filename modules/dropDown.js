@@ -73,9 +73,9 @@ var DropDown = (function () {
         }
 
         set direction(dir) {
-            let dirNot = (dir === 'down' ? 'up' : dir);
-            this.$arrows.removeClass(getSelectorClass(dir));
-            this.$arrows.addClass(getSelectorClass(dirNot));
+            let dirNot = (dir === 'down' ? 'up' : 'down');
+            this.$arrows.removeClass(getSelectorClass(dirNot));
+            this.$arrows.addClass(getSelectorClass(dir));
             this.change();
         }
 
